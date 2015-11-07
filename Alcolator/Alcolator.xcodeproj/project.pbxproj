@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA7BFF4C1BE85FE0003059BA /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7BFF491BE85FE0003059BA /* MainMenuViewController.m */; };
+		DA7BFF4D1BE85FE0003059BA /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7BFF4B1BE85FE0003059BA /* WhiskeyViewController.m */; };
 		DAFEF70D1BE5483D00AEAB50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF70C1BE5483D00AEAB50 /* main.m */; };
 		DAFEF7101BE5483D00AEAB50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF70F1BE5483D00AEAB50 /* AppDelegate.m */; };
 		DAFEF7131BE5483D00AEAB50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF7121BE5483D00AEAB50 /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA7BFF481BE85FE0003059BA /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = SOURCE_ROOT; };
+		DA7BFF491BE85FE0003059BA /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = SOURCE_ROOT; };
+		DA7BFF4A1BE85FE0003059BA /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = SOURCE_ROOT; };
+		DA7BFF4B1BE85FE0003059BA /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = SOURCE_ROOT; };
 		DAFEF7071BE5483D00AEAB50 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEF70B1BE5483D00AEAB50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFEF70C1BE5483D00AEAB50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 		DAFEF7091BE5483D00AEAB50 /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BFF481BE85FE0003059BA /* MainMenuViewController.h */,
+				DA7BFF491BE85FE0003059BA /* MainMenuViewController.m */,
+				DA7BFF4A1BE85FE0003059BA /* WhiskeyViewController.h */,
+				DA7BFF4B1BE85FE0003059BA /* WhiskeyViewController.m */,
 				DAFEF70E1BE5483D00AEAB50 /* AppDelegate.h */,
 				DAFEF70F1BE5483D00AEAB50 /* AppDelegate.m */,
 				DAFEF7111BE5483D00AEAB50 /* ViewController.h */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7BFF4C1BE85FE0003059BA /* MainMenuViewController.m in Sources */,
 				DAFEF7131BE5483D00AEAB50 /* ViewController.m in Sources */,
 				DAFEF7101BE5483D00AEAB50 /* AppDelegate.m in Sources */,
+				DA7BFF4D1BE85FE0003059BA /* WhiskeyViewController.m in Sources */,
 				DAFEF70D1BE5483D00AEAB50 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +364,7 @@
 				INFOPLIST_FILE = Alcolator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -362,6 +375,7 @@
 				INFOPLIST_FILE = Alcolator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -418,6 +432,7 @@
 				DAFEF72C1BE5483E00AEAB50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAFEF72D1BE5483E00AEAB50 /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +441,7 @@
 				DAFEF72F1BE5483E00AEAB50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
