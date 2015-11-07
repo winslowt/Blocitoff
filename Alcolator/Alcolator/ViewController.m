@@ -35,6 +35,8 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", [self.title intValue]]];
+    
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
     float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
@@ -44,7 +46,9 @@
     float ouncesInOneWineGlass = 5;  // wine glasses are usually 5oz
     float alcoholPercentageOfWine = 0.13;  // 13% is average
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
+
     float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    int wholeNumber = (int) numberOfWineGlassesForEquivalentAlcoholAmount;
     // decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
     if (numberOfBeers == 1) {
@@ -53,12 +57,13 @@
         beerText = NSLocalizedString(@"beers", @"plural of beer");
     }
     NSString *wineText;
-    if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+    if (wholeNumber == 1) {
         wineText = NSLocalizedString(@"glass", @"singular glass");
     } else {
         wineText = NSLocalizedString(@"glasses", @"plural of glass");
     }
-    self.title = [NSString stringWithFormat: @"wine (%d %@) ", (int)numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+    self.title = [NSString stringWithFormat: @"wine (%d %@) ", wholeNumber, wineText];
+    
 }
 
 
