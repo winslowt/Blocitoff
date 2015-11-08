@@ -35,7 +35,6 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", [self.title intValue]]];
     
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
@@ -63,6 +62,17 @@
         wineText = NSLocalizedString(@"glasses", @"plural of glass");
     }
     self.title = [NSString stringWithFormat: @"wine (%d %@) ", wholeNumber, wineText];
+    
+    int i = wholeNumber;
+    
+    NSString *myString = [NSString stringWithFormat:@"%d",i];
+    
+    
+    [self.tabBarItem setBadgeValue:myString];
+  
+    
+                                    
+     
     
 }
 

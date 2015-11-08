@@ -54,8 +54,13 @@
         }
       self.title = [NSString stringWithFormat: @"whiskey (%d %@) ", wholeNumber, whiskeyText];
     
+    int i = wholeNumber;
     
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) self.title]];
+    NSString *myString = [NSString stringWithFormat:@"%d",i];
+    
+    
+    [self.tabBarItem setBadgeValue:myString];
+    
     
     
 }
